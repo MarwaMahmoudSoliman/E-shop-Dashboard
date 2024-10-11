@@ -1,0 +1,29 @@
+<br><br><br>
+<div class="w-75 h-25 mt-5 m-auto shadow p-4 bg-primary rounded">
+  <h1 class="text-center mb-4 text-white">Update "{{product.name}}" Product</h1>
+  
+  <form [formGroup]="productForm" (ngSubmit)="updateProduct(product._id, productForm)">
+    
+    <div class="mb-3">
+      <input
+        formControlName="name"
+        class="form-control"
+        type="text"
+        placeholder="Product Name"
+      />
+      
+
+      <div *ngIf="productForm.get('name')?.touched && productForm.get('name')?.invalid" class="mt-2">
+        <p *ngIf="productForm.get('name')?.errors?.['required']" class="text-danger">Product name is required.</p>
+        <p *ngIf="productForm.get('name')?.errors?.['minlength']" class="text-danger">Product name must be at least 2 characters long.</p>
+        <p *ngIf="productForm.get('name')?.errors?.['maxlength']" class="text-danger">Product name cannot exceed 50 characters.</p>
+      </div>
+    </div>
+
+    <div class="mt-4 text-center">
+      <button [disabled]="productForm.invalid" class="btn btn-warning mx-2">Update</button>
+      <a routerLink="/products" class="btn btn-danger mx-2">Cancel</a>
+    </div>
+  </form>
+</div>
+<br><br><br>

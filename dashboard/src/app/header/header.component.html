@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: rgb(37, 75, 188); color:white">
+  <div class="container-fluid"style="background-color: rgb(37, 75, 188); color:white">
+    <a class="navbar-brand" href="#">Online Shop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+       
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active"  style="color: aliceblue;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/categories" routerLinkActive="active" style="color: aliceblue;">Categories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/subcategories" routerLinkActive="active" style="color: aliceblue;">Subcategories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products" routerLinkActive="active" style="color: aliceblue;">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/coupons" routerLinkActive="active" style="color: aliceblue;">Coupons</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/orders" routerLinkActive="active" style="color: aliceblue;">Orders</a>
+        </li>
+        <!-- Display 'Users' menu only for managers -->
+        <li class="nav-item" [hidden]="user.role !== 'manager'">
+          <a class="nav-link" routerLink="/users" routerLinkActive="active"style="color: aliceblue;">Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/profile" routerLinkActive="active" style="color: aliceblue;">Profile</a>
+        </li>
+        <li class="nav-item">
+          <button (click)="logout()" class="nav-link btn btn-link text-white" style="color: aliceblue;">Logout</button>
+        </li>
+       
+      </ul>
+    
+    </div>
+  </div>
+
+</nav>
+
+

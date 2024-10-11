@@ -1,0 +1,118 @@
+// /* General container shadow and hover animations */
+// .shadow-sm {
+//     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//     transition: transform 0.3s ease, box-shadow 0.3s ease;
+//   }
+  
+//   /* Image hover animations */
+//   .animate:hover {
+//     transform: scale(1.05);
+//     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+//   }
+  
+//   /* Button hover effects */
+//   .btn-animated:hover {
+//     transform: translateY(-2px);
+//     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+//   }
+  
+//   /* Preview images hover */
+//   .animate-preview:hover {
+//     transform: scale(1.1);
+//     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
+//   }
+  
+//   /* Review item hover */
+//   .review-item:hover {
+//     transform: translateY(-5px);
+//     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+//   }
+  
+//   /* Smooth transition for elements */
+//   .transition {
+//     transition: all 0.3s ease;
+//   }
+  
+//   /* Icons */
+//   .questions-icon {
+//     font-size: 2rem;
+//     color: #007bff;
+//   }
+  
+//   .fa-truck, .fa-filter {
+//     color: #28a745;
+//   }
+  
+//   /* Star rating hover effect */
+//   .star:hover {
+//     color: gold;
+//   }
+$gradient-bg: linear-gradient(to bottom, #ffffff, #ffffff, #6684d6, #1c5bd0, #2073cc);
+
+.container-fluid {
+    background-color: #000507;
+   
+
+
+
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  .bg-primaryy{
+    background-color: #2073cc;
+  }
+  h2 {
+    color: #333;
+    background-color: #2073cc;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+  
+.btn-primary {
+  background-color: #4b34ce;
+  border-color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+table {
+  border-collapse: collapse;
+}
+
+table thead {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+}
+
+table th {
+  background-color: #007bff;
+  color: white;
+}
+
+table td img {
+  border-radius: 5px;
+}

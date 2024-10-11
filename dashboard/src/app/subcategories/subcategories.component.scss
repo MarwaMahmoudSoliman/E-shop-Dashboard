@@ -1,0 +1,51 @@
+$gradient-bg: linear-gradient(to bottom, #ffffff, #ffffff, #6684d6, #1c5bd0, #2073cc);
+
+.container-fluid {
+    background-color: #74b7dc;
+   
+
+
+  background: $gradient-bg;
+
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  .bg-primaryy{
+    background-color: #2073cc;
+  }
+  h2 {
+    color: #333;
+    background-color: #2073cc;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+  
+  .table {
+    background-color: white;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+  }
+  
+  .table thead th {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .table td, .table th {
+    vertical-align: middle;
+  }
+  
+  .btn {
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    opacity: 0.85;
+  }
+  

@@ -1,0 +1,8 @@
+<div class="stat-card">
+    <h5>{{ title }}</h5>
+    <h3>{{ value | currency:'USD':'symbol' }}</h3>
+    <p class="text-muted">
+      {{ change > 0 ? '+' : '' }}{{ change }}% ({{ period || 'Annual' }})
+    </p>
+  </div>
+  

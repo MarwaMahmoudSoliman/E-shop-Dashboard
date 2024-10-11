@@ -1,0 +1,65 @@
+.user-detail {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ color: #f9f9f9;
+ background-color: #6776c8;
+}
+
+h2 {
+    font-size: 24px;
+    color: #482a2a;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 20px;
+  
+    color: #000000;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #dadada;
+    color: #000000;
+    margin: 5px 0;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #000000;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+
+
+.table tbody tr:nth-child(even) {
+    background-color: #3a0000;
+}
+
+// .table tbody tr:hover {
+ 
+// }
+
+
+.table tbody td:last-child {
+    text-align: center; /* Center-align items if needed */
+}
+
+p *ngIf {
+    color: #c00; /* Color for no orders found message */
+    font-weight: bold;
+    text-align: center;
+}

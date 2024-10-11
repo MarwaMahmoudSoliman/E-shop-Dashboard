@@ -1,0 +1,49 @@
+<br><br><br>
+<div class="w-50 mt-5 m-auto shadow p-4 " style="color: rgb(14, 17, 207); ">
+  <h1 class="text-center mb-4">Add Coupon</h1>
+  <form [formGroup]="couponForm" (ngSubmit)="createCoupon(couponForm)">
+    <!-- Coupon Name Input -->
+    <div class="input-group mb-3">
+      <span class="input-group-text">
+        <i class="fas fa-ticket-alt"></i>
+      </span>
+      <input formControlName="name" class="form-control" type="text" placeholder="Coupon Name">
+    </div>
+    <div *ngIf="couponForm.get('name')?.errors && couponForm.get('name')?.touched" class="text-danger">
+      <small *ngIf="couponForm.get('name')?.errors?.['required']">Coupon name is required</small>
+    </div>
+
+    <!-- Discount Input -->
+    <div class="input-group mb-3">
+      <span class="input-group-text">
+        <i class="fas fa-percent"></i>
+      </span>
+      <input formControlName="discount" class="form-control" type="number" placeholder="Discount">
+    </div>
+    <div *ngIf="couponForm.get('discount')?.errors && couponForm.get('discount')?.touched" class="text-danger">
+      <small *ngIf="couponForm.get('discount')?.errors?.['required']">Discount is required</small>
+    </div>
+
+    <!-- Expiration Time Input -->
+    <div class="input-group mb-3">
+      <span class="input-group-text">
+        <i class="fas fa-calendar-alt"></i>
+      </span>
+      <input formControlName="expireTime" class="form-control" type="date" placeholder="Expiration Time">
+    </div>
+    <div *ngIf="couponForm.get('expireTime')?.errors && couponForm.get('expireTime')?.touched" class="text-danger">
+      <small *ngIf="couponForm.get('expireTime')?.errors?.['required']">Expiration time is required</small>
+    </div>
+
+    <!-- Buttons -->
+    <div class="mt-4 text-center">
+      <button [disabled]="couponForm.invalid" class="btn btn-primary me-3">
+        <i class="fas fa-plus-circle"></i> Create
+      </button>
+      <a routerLink="/coupons" class="btn btn-danger">
+        <i class="fas fa-times-circle"></i> Cancel
+      </a>
+    </div>
+  </form>
+</div>
+<br><br><br>

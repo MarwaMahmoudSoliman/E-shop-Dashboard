@@ -1,0 +1,27 @@
+<br><br><br>
+<div class="w-50 mt-5 m-auto shadow p-4">
+  <h1 class="text-center">Delete "{{ product.name }}" Product</h1>
+  
+  <form [formGroup]="productForm" (ngSubmit)="deleteProduct(product._id)">
+    <div class="p-3">
+      <input
+        formControlName="name"
+        class="form-control"
+        type="text"
+        placeholder="Product Name"
+        [value]="product?.name"
+      />
+
+      <!-- Error handling for product name -->
+      <div class="p-0 mt-3" *ngIf="productForm.get('name')?.touched && productForm.get('name')?.invalid">
+        <p *ngIf="productForm.get('name')?.errors?.['required']" class="text-danger">Product name is required</p>
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <button [disabled]="productForm.invalid" class="btn btn-primary mx-3">Delete</button>
+      <a routerLink="/products" class="btn btn-danger">Cancel</a>
+    </div>
+  </form>
+</div>
+<br><br><br>

@@ -1,0 +1,38 @@
+.table-hover tbody tr:hover {
+    background-color: #0970d8; /* Light background on hover */
+  }
+  
+  .pagination .page-item .page-link {
+    color: #007bff; /* Custom color */
+  }
+  
+  .pagination .page-item.disabled .page-link {
+    color: #ad5100b0; /* Disabled link color */
+  }
+  .pagination {
+    background-color: #f8f9fa; 
+color: #f8f9fa;/* Light background for the pagination */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .page-item {
+    margin: 0 5px; /* Space between pagination items */
+  }
+  
+  .page-link {
+    background-color: #ffffff; /* Bootstrap primary color */
+    font-weight: bold; /* Bold text for links */
+    transition: background-color 0.2s; /* Smooth transition */
+  }
+  
+  .page-link:hover {
+    background-color: #e9ecef; /* Light hover effect */
+  }
+  
+  .page-item.disabled .page-link {
+    background-color: #f8f9fa; /* Disabled item background */
+    color: #6c757d; /* Disabled text color */
+    cursor: not-allowed; /* Change cursor for disabled */
+  }
+  

@@ -1,0 +1,60 @@
+
+<div class="container-fluid w-75 mt-5">
+  <h2 class="text-center my-5">All Subcategories</h2>
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <a class="btn  px-4 py-2 bg-primaryy" routerLink="create"><i class="fas fa-plus"></i>
+      Create Subcategory</a>
+    <input (keyup)="searchData(searchInput.value)" #searchInput class="form-control me-2 w-25" type="search" placeholder="Search"
+      aria-label="Search">
+  </div>
+  
+  <div class="table-responsive">
+    <table class="table table-hover table-striped table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col" class="text-center">#</th>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Category</th>
+          <th scope="col" class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+ 
+        <tr *ngFor="let subcategory of subcategories; let i = index">
+          <td class="text-center">{{ i + 1 }}</td>
+          <td>{{ subcategory._id | slice: -4 }}</td>
+          <td>{{ subcategory.name }}</td>
+          <td>{{ subcategory.category?.name }}</td>
+          <td class="text-center">
+            <a [routerLink]="[subcategory._id, 'update']" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i>
+              Update</a>
+            <button (click)="deleteSubcategory(subcategory._id)" class="btn btn-danger btn-sm ms-2"><i class="fas fa-trash"></i>
+              Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div *ngIf="subcategories.length === 0" class="text-center mt-5">
+    <h4>No Subcategories Found</h4>
+  </div>
+</div>
+
+<div class="container m-auto mt-5 w-25">
+  <ul class="pagination">
+    <li (click)="changePage(1)" class="page-item"><button class="page-link">First</button></li>
+    @if(pagination.prev){
+    <li (click)="changePage(pagination.prev)" class="page-item"><button class="page-link">{{pagination.prev}}</button>
+    </li>
+    }
+    <li class="page-item"><button disabled class="page-link">{{pagination.currentPage}}</button></li>
+    @if(pagination.next){
+    <li (click)="changePage(pagination.next)" class="page-item"><button class="page-link">{{pagination.next}}</button>
+    </li>
+    }
+    <li (click)="changePage(pagination.totalPages!)" class="page-item"><button class="page-link">Last</button></li>
+  </ul>
+</div>

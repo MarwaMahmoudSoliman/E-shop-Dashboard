@@ -1,0 +1,15 @@
+.sidebar {
+    min-height: 100vh; /* Full screen height */
+    width: 250px;      /* Width of the sidebar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link.active {
+    font-weight: bold;
+    color: #fff !important; /* To ensure active links stand out */
+  }
+  
